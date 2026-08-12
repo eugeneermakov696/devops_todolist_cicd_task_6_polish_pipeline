@@ -35,8 +35,8 @@ jobs:
   python-ci:
     strategy:
       matrix:
-        PythonVersion: [inputs.python-version]
-        OsType: [inputs.os]
+        PythonVersion: ${{ inputs.python-version }}
+        OsType: ${{ inputs.os }}
 
     runs-on: ${{ matrix.OsType }}
     defaults:
