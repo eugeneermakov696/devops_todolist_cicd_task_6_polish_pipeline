@@ -28,15 +28,15 @@ on:
           - ubuntu-latest
           - windows-latest
 env:
-  PythonVersion: ${{ inputs.python-version }}
+  PythonVersion: 3.8
   DockerImageName: eug696-todoapp
 
 jobs:
   python-ci:
     strategy:
       matrix:
-        PythonVersion: ${{ inputs.python-version }}
-        OsType: ${{ inputs.os }}
+        PythonVersion: [3.8, 3.9]
+        OsType: [ubuntu-latest, windows-latest]
 
     runs-on: ${{ matrix.OsType }}
     defaults:
