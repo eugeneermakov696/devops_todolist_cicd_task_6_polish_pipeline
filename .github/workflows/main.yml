@@ -32,7 +32,6 @@ env:
   DockerImageName: eug696-todoapp
 
 jobs:
-  name: Python CI
   python-ci:
     strategy:
       matrix:
